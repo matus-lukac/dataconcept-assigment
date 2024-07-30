@@ -1,0 +1,15 @@
+{
+    "name": "dataconcept/weather-app",
+    "description": "Jednoduchá aplikácia na počasie",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0",
+        "phpoffice/phpspreadsheet": "^1.18"
+    },
+    "autoload": {
+        "psr-4": {
+            "DataConceptAssignment\\WeatherApp\\": "src/WeatherApp/"
+        }
+    }
+}
