@@ -2,4 +2,5 @@
 composer.lock
 /vendor/
 /public/downloads/*
-!/downloads/.gitkeep
+!/public/
+!/public/downloads/.gitkeep
