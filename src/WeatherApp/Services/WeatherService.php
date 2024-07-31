@@ -40,9 +40,12 @@ class WeatherService
             foreach ($data['list'] as $forecast) {
                 $forecastDate = substr($forecast['dt_txt'], 0, 10);
                 if ($forecastDate === $date) {
+                    $dateTime = \DateTime::createFromFormat('Y-m-d H:i:s', $forecast['dt_txt']);
+                    $formattedDate = $dateTime->format('d-m-Y H:i');
+                    
                     $weatherDataArray[] = new WeatherData(
                         $city,
-                        $forecast['dt_txt'],
+                        $formattedDate,
                         $forecast['main']['temp'],
                         $forecast['weather'][0]['description']
                     );
